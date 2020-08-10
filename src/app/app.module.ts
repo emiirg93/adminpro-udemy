@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//Modulos Personalizados.
+// Modulos Personalizados.
 import { AuthModule } from './auth/auth.module';
 import { AppRoturingModule } from './app-roturing.module';
 import { PagesModule } from './pages/pages.module';
