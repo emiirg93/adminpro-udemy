@@ -12,12 +12,22 @@ export class SidebarService {
       subMenu: [
         { titulo: 'Main', url: '/' },
         { titulo: 'ProgressBar', url: 'progress' },
+        { titulo: 'Promesas', url: 'promesas' },
         { titulo: 'Graficas', url: 'grafica1' },
+        { titulo: 'Rxjs', url: 'rxjs' },
       ]
     }
   ];
 
-  constructor() { }
+  constructor() {
+    this.sortSubMenus();
+  }
+
+  sortSubMenus(): void {
+    for (const iterator of this.menu) {
+      iterator.subMenu = iterator.subMenu.sort((a, b) => a.titulo.toLowerCase().localeCompare(b.titulo.toLowerCase()));
+    }
+  }
 }
 
 export interface Menu {
